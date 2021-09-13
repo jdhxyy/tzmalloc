@@ -176,3 +176,12 @@ TZMallocStatus TZMallocGetStatus(int ramIndex) {
     bstats(ramIndex, &status.UsedSize, &status.FreeSize, &status.MaxFreeSize, &status.MallocNum, &status.FreeNum);
     return status;
 }
+
+// TZMallocGetUserMid get user mid
+// return -1 if get failed
+int TZMallocGetUserMid(int ramIndex, int index) {
+    if (index < 0 || index >= gUsersNum[ramIndex]) {
+        return -1;
+    }
+    return (TZMALLOC_SUPPORT_USER_NUM_MAX * ramIndex + index);
+}

@@ -64,4 +64,8 @@ int TZMallocGetUserNum(int ramIndex);
 // TZMallocGetStatus get memory status
 TZMallocStatus TZMallocGetStatus(int ramIndex);
 
+// TZMallocGetUserMid get user mid
+// return -1 if get failed
+int TZMallocGetUserMid(int ramIndex, int index);
+
 #endif

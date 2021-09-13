@@ -14,10 +14,6 @@
 // suport ram num
 #define BGET_RAM_NUM 3
 
-// silent warn
-#pragma diag_suppress 1294
-#pragma diag_suppress 1295
-
 typedef long bufsize;
 void	bpool	    _((int ramIndex, void *buffer, bufsize len));
 void   *bget	    _((int ramIndex, bufsize size));
