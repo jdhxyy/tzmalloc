@@ -9,7 +9,7 @@
 #include <stdbool.h>
 
 // user's tag max len
-#define TZMALLOC_TAG_LEN_MAX 16
+#define TZMALLOC_TAG_LEN_MAX 10
 // support ram num
 #define TZMALLOC_RAM_NUM 3
 // max user nums each ram
@@ -19,7 +19,7 @@
 
 // user info
 typedef struct {
-    int RamIndex;
+    uint8_t RamIndex;
     char Tag[TZMALLOC_TAG_LEN_MAX + 1];
     uint32_t Total;
     uint32_t Used;

@@ -6,16 +6,15 @@
 #include "bget.h"
 #include <string.h>
 
-#define MAGIC_NUMBER 0x2020
+#define MAGIC_NUMBER 0x20
 
 #pragma pack(1)
 // tUnit malloc unit header
 typedef struct {
-    uint16_t magicNumber;
+    uint8_t magicNumber;
     uint8_t ramIndex;
     uint8_t mid;
     uint32_t size;
-    uint8_t reserved[3];
     // check must the last field
     uint8_t check;
 } tUnit;
